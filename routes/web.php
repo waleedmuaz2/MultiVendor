@@ -15,14 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@manageaccount')->name('home');
+Route::get('/addproduct', 'HomeController@AddProduct')->name('home');
+Route::get('/profile', 'HomeController@profile')->name('home');
+
+
 
 Route::get('/checkout', 'Mlink@checkout');
 Route::get('/aftersearch', 'Mlink@aftersearch')->name('aftersearch');
 Route::get('/productdetail', 'Mlink@productdetail');
-Route::get('/addproduct', 'Mlink@AddProduct');
-Route::get('/manageaccount', 'Mlink@manageaccount');
 Route::get('/mycart', 'Mlink@mycart');
-Route::get('/profile', 'Mlink@profile');
 Route::get('/vendorpage', 'Mlink@vendorpage');
 Route::get('/wishlist', 'Mlink@wishlist');

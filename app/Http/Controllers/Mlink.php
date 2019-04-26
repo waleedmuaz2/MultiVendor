@@ -18,26 +18,20 @@ class Mlink extends Controller
     {
         return view('product-detail');
     }
-    public function AddProduct()
-    {
-        return view('addproduct');
-    }
+    
      public function contact()
     {
         return view('contactus');
     }
-     public function manageaccount()
-    {
-        return view('manageaccount');
-    }
+     
+
+
+     
      public function mycart()
     {
         return view('mycart');
     }
-    public function profile()
-    {
-        return view('profile');
-    } 
+   
      public function vendorpage()
     {
         return view('vendorpage');
