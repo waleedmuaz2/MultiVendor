@@ -23,10 +23,6 @@ class Mlink extends Controller
     {
         return view('contactus');
     }
-     
-
-
-     
      public function mycart()
     {
         return view('mycart');

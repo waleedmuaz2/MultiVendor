@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-@section('title','Add New Product')
+@section('title','Add New Vendor')
 @section('content')
 @include('layouts.header')
 

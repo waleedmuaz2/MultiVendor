@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@manageaccount')->name('home');
-Route::get('/addproduct', 'HomeController@AddProduct')->name('home');
+Route::get('/addvendor', 'HomeController@addvendor')->name('home');
 Route::get('/profile', 'HomeController@profile')->name('home');
 
 
