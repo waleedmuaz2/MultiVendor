@@ -80,28 +80,33 @@
                             </div>
                           
                             <ul class="custom-menu">
-                                <li><a href="#"><i class="fa fa-user-o"></i>Vender Account</a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i>My Wishlist</a></li>
+                                <li><a href="{{url('/wishlist')}}"><i class="fa fa-heart-o"></i>My Wishlist</a></li>
                               @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-o"></i>{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                             <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-o"></i>{{ __('Register') }}</a>
+                                     <a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-o"></i>{{ __('Register') }}</a>
                                 </li>
                             @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('home') }}" role="" data-toggle="" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user-o"></i>
-                                    {{ Auth::user()->name }} </span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    
-                                </div>
-                            </li>
-                        @endguest
+                             @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('home') }}" role="" data-toggle="" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user-o"></i>
+                                        {{ Auth::user()->name }} </span>
+                                    </a>
+                                        
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        
+                                    </div>
+                                </li>
+                                <hr width="100%">
+                                <li><a href="{{url('/addvendor')}}"
+                                    id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('home') }}" role="" data-toggle="" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user-o"></i>
+                                      Add a Vender </span>
+                                    </a>
+                                </li>
+                             @endguest
                             </ul>
                         </li>
                         <!-- /Account -->

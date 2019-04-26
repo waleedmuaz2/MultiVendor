@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('title','Add New Vendor')
 @section('content')
@@ -14,58 +13,65 @@
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(css2/images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						Selected Category
+						Add New Vendor
 					</span>
 					<span class="login100-form-title-2">
 							Include Some Details
 						</span>
 				</div>
 
-				<form class="login100-form validate-form">
-					
+				<form class="login100-form validate-form" action="{{url('/SubmitVendorInfo')}}" method="POST">
+					            <input type="hidden" name="_token" value="{{csrf_token()}}" >
+
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Type is required">
-						<span class="label-input100">Type</span>
-						<select  class="input100" id="country" name="type" placeholder="Type">
-								<option value="australia">Type</option>
-								<option value="canada">Canada</option>
-								<option value="usa">USA</option>
+						<span class="label-input100">Work As</span>
+						<select  class="input100"  id="country" name="workas">
+								<option value="Business to Customer"selected >Business to Customer</option>
 							</select>
 						<span class="focus-input100"></span>
 					</div>
+
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Title is required">
-							<span class="label-input100">Title</span>
-							<input class="input100" type="text" name="Title" placeholder="Title">
+							<span class="label-input100">Company Name</span>
+							<input class="input100" type="text" name="ComName" placeholder="Company Name">
 							<span class="focus-input100"></span>
 						</div>
-						<div class="wrap-input100 validate-input m-b-26" data-validate="set-price is required">
-								<span class="label-input100">Set Price</span>
-								<input class="input100" type="text" name="Set Price" placeholder="Set Price">
-								<span class="focus-input100"></span>
-							</div>
-							<div class="wrap-input100 validate-input m-b-26" data-validate="Company Name is required">
-									<span class="label-input100">Co Name</span>
-									<input class="input100" type="text" name="Company Name" placeholder="Company Name">
-									<span class="focus-input100"></span>
-								</div>
+
+
+
+
+						<div class="wrap-input100 validate-input m-b-18" data-validate = "Type is required">
+						<span class="label-input100">Main Category</span>
+						<select  class="input100" id="country" name="MainCategory">
+								<option value="Care Care">Care Care</option>
+								<option value="Interior">Interior</option>
+								<option value="Exterior">Exterior</option>
+							</select>
+						<span class="focus-input100"></span>
+						</div>
+
+
+
+
 								<div class="wrap-input100 validate-input m-b-26" data-validate="Phone No is required">
 										<span class="label-input100">Phone No</span>
-										<input class="input100" type="text" name="Phone No" placeholder="Phone No">
+										<input class="input100" type="text" name="Phone" placeholder="Phone No">
 										<span class="focus-input100"></span>
 									</div>
 									<div class="wrap-input100 validate-input m-b-26" data-validate="Adress is required">
-											<span class="label-input100">Co Adress</span>
-											<input class="input100" type="text" name="Company Adress" placeholder="Company Adress">
+											<span class="label-input100">Company ddress</span>
+											<input class="input100" type="text" name="CompanyAddress" placeholder="Company ddress">
 											<span class="focus-input100"></span>
 										</div>
 			<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
 						<span class="label-input100">Co Email</span>
-						<input class="input100" type="text" name="Email" placeholder="Company Email">
+						<input class="input100"  type="text" readonly  name="Email" value="{{ Auth::user()->email }}">				
 				<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-26" data-validate="URL is required">
 							<span class="label-input100">Co URL</span>
-							<input class="input100" type="text" name="URL" placeholder="Company URL">
+							<input class="input100" type="text" name="CoURL" placeholder="Company URL">
 							<span class="focus-input100"></span>
 						</div>
 						<div class="wrap-input100 validate-input m-b-26" data-validate="Description is required">
@@ -73,19 +79,6 @@
 								<input class="input100" type="text" name="Description" placeholder="Description">
 								<span class="focus-input100"></span>
 							</div>
-						
-
-
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-
-					
-					</div>
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">

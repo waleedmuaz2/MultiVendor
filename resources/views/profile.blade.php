@@ -4,6 +4,15 @@
 @include('layouts.header')
 	<!-- /NAVIGATION -->
 		<!-- /BREADCRUMB -->
+		<div class="sidebar">
+  <a class="active" href="#home">Manage Account</a>
+  <a href="#news">My Profile</a>
+  <a href="#contact">Adress Book</a>
+	<a class="active"href="#about">My Orders</a>
+	<a href="#news">My Returns</a>
+  <a href="#contact">My Cancellations</a>
+</div>
+<div class="box1">
 		<div class="section-title">
 				<h3 class="title">Profile</h3>
 			</div>
@@ -11,7 +20,7 @@
 <div class="container-fluid">
   
 		<div class="row">
-		  <div class="col-sm-4" style="background-color:white;"><p><strong> Name</strong><br><br>Asad Ali</p><br>
+		  <div class="col-sm-3" style="background-color:white;"><p><strong> Name</strong><br><br>Asad Ali</p><br>
 			<div class="row">
 					<div class="col-sm-6" style="background-color:white;"><p><strong>Gender</strong><br><br>
 						male</p></div>
@@ -20,9 +29,9 @@
 			</div>
 			
 		  </div>
-		  <div class="col-sm-4" style="background-color:white;"><p><strong>Email Address</strong> | <a href="#"> Change</a><br><br>
+		  <div class="col-sm-3" style="background-color:white;"><p><strong>Email Address</strong> | <a href="#"> Change</a><br><br>
 			asadzulfiqar28@gmail.com</p></div>
-			  <div class="col-sm-4" style="background-color:white;"><P><strong>Mobile</strong> | <a href="#">Change</a><br><br>
+			  <div class="col-sm-3" style="background-color:white;"><P><strong>Mobile</strong> | <a href="#">Change</a><br><br>
 					+92 3244461309</P></div>
 					<div class="row">
 						<div class="col-sm-12" style="background-color:white;"><a href="#fakeLink" class="btn">  &nbsp &nbsp&nbsp Edit Profile
@@ -32,7 +41,8 @@
 					  </div>
 		</div>
 	  </div>
-		  
+</div>	
+
 
 @include('layouts.footer')
 @endsection

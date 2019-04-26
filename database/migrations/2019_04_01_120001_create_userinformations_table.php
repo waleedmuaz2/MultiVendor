@@ -15,6 +15,14 @@ class CreateUserinformationsTable extends Migration
     {
         Schema::create('userinformations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('WorkAs');
+            $table->string('ComName');
+            $table->string('MainCategory');
+            $table->string('Phone');
+            $table->string('CompanyAddress');
+            $table->string('Email');
+            $table->string('CoURL');
+            $table->string('Description');
             $table->timestamps();
         });
     }

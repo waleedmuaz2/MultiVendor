@@ -38,6 +38,22 @@ class UserinformationController extends Controller
         //
     }
 
+    public function StoreVendorInfo(Request $request)
+    {
+        $post=new Userinformation;
+        $post->WorkAs=$request->workas;
+        $post->ComName=$request->ComName;
+        $post->MainCategory=$request->MainCategory;
+        $post->Phone=$request->Phone;
+        $post->CompanyAddress=$request->CompanyAddress;
+        $post->Email=$request->Email;
+        $post->CoURL=$request->CoURL;
+        $post->Description=$request->Description;
+        $post->save();
+        return redirect()->to('/'); 
+    }
+
+
     /**
      * Display the specified resource.
      *
