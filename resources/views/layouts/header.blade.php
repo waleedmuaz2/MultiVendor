@@ -103,7 +103,7 @@
                                 <hr width="100%">
                                 <li><a href="{{url('/addvendor')}}"
                                     id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('home') }}" role="" data-toggle="" aria-haspopup="true" aria-expanded="false" v-pre><i class="fa fa-user-o"></i>
-                                      Add a Vender </span>
+                                      Add a Vendor </span>
                                     </a>
                                 </li>
                              @endguest
