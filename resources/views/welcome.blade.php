@@ -58,7 +58,7 @@
             <div class="row">
                 <!-- banner -->
                 <div class="col-md-4 col-sm-6">
-                    <a class="banner banner-1" href="#">
+                    <a class="banner banner-1" href="{{url('/aftersearch')}}">
                         <img src="{{URL::asset('./img/banner10.jpg')}}" alt="">
                         <div class="banner-caption text-center">
                             <h2 class="white-color">Car Care</h2>
@@ -69,7 +69,7 @@
 
                 <!-- banner -->
                 <div class="col-md-4 col-sm-6">
-                    <a class="banner banner-1" href="#">
+                    <a class="banner banner-1" href="{{url('/aftersearch')}}">
                         <img src="{{URL::asset('./img/banner11.jpg')}}" alt="">
                         <div class="banner-caption text-center">
                             <h2 class="white-color">Exterior</h2>
@@ -80,7 +80,7 @@
 
                 <!-- banner -->
                 <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
-                    <a class="banner banner-1" href="#">
+                    <a class="banner banner-1" href="{{url('/aftersearch')}}">
                         <img src="{{URL::asset('./img/banner12.jpg')}}" alt="">
                         <div class="banner-caption text-center">
                             <h2 class="white-color">Interior</h2>

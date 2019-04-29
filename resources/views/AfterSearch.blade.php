@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Welcome')
+@section('title','Search')
 
 @section('content')
 @include('layouts.header')
